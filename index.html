@@ -1,1 +1,169 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Grass Roots Cyber - Illinois Tech & FOSS Community</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    /* Reset */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    /* Base Styles */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #121212;
+      color: #e0e0e0;
+      overflow-x: hidden;
+      line-height: 1.6;
+      position: relative;
+      min-height: 100vh;
+    }
+
+    /* Cyber Grid Background */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle at center, rgba(0, 255, 170, 0.1), transparent 70%);
+      opacity: 0.15;
+      animation: pulse 10s infinite;
+      z-index: -2;
+    }
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+    }
+
+    /* Moving Grid Lines */
+    .cyber-lines {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      background-image: 
+        linear-gradient(0deg, transparent 24%, rgba(0, 255, 174, 0.05) 25%, rgba(0, 255, 174, 0.05) 26%, transparent 27%, transparent 74%, rgba(0, 255, 174, 0.05) 75%, rgba(0, 255, 174, 0.05) 76%, transparent 77%, transparent),
+        linear-gradient(90deg, transparent 24%, rgba(0, 255, 174, 0.05) 25%, rgba(0, 255, 174, 0.05) 26%, transparent 27%, transparent 74%, rgba(0, 255, 174, 0.05) 75%, rgba(0, 255, 174, 0.05) 76%, transparent 77%, transparent);
+      background-size: 50px 50px;
+      animation: moveGrid 20s linear infinite;
+      z-index: -1;
+    }
+    @keyframes moveGrid {
+      from { background-position: 0 0, 0 0; }
+      to { background-position: 50px 50px, 50px 50px; }
+    }
+
+    /* Header */
+    header {
+      background: linear-gradient(135deg, #0d0d0d, #1a1a1a);
+      padding: 2rem 1rem;
+      text-align: center;
+      border-bottom: 1px solid #333;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      color: #00ffae;
+      text-shadow: 0 0 10px #00ffae;
+      margin-bottom: 0.5rem;
+    }
+    header p {
+      font-size: 1.2rem;
+      color: #b0b0b0;
+    }
+
+    /* Main Container */
+    .container {
+      padding: 2rem 1rem;
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .container h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #00ffaa;
+      text-shadow: 0 0 5px #00ffaa;
+    }
+    .container p {
+      margin-bottom: 1.5rem;
+    }
+
+    /* Button Styling */
+    .button {
+      display: inline-block;
+      margin: 1rem;
+      padding: 0.75rem 1.5rem;
+      background: linear-gradient(45deg, #00ffae, #00ffaa);
+      color: #121212;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 30px;
+      transition: transform 0.3s, box-shadow 0.3s;
+      box-shadow: 0 4px 15px rgba(0, 255, 174, 0.4);
+    }
+    .button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 20px rgba(0, 255, 174, 0.6);
+    }
+
+    /* Meeting Info */
+    .meeting {
+      background: rgba(0, 0, 0, 0.5);
+      border: 1px solid #333;
+      padding: 1rem;
+      border-radius: 10px;
+      margin-top: 2rem;
+    }
+    .meeting h3 {
+      margin-bottom: 0.5rem;
+      color: #00ffae;
+    }
+    .meeting a {
+      color: #00ffaa;
+      text-decoration: underline;
+    }
+
+    /* Footer */
+    footer {
+      padding: 1rem;
+      background: #1a1a1a;
+      text-align: center;
+      color: #666;
+      font-size: 0.9rem;
+      border-top: 1px solid #333;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="cyber-lines"></div>
+  <header>
+    <h1>Grass Roots Cyber</h1>
+    <p>Connecting Ubuntu Illinois LoCo & LibrePlanet Illinois</p>
+  </header>
+  <div class="container">
+    <h2>Welcome to Grass Roots Cyber</h2>
+    <p>Your hub for cybersecurity, technology, and community in Illinois.</p>
+    <p>Join our groups to collaborate, learn, and empower our Free Libre Open Source Software community!</p>
+    
+    <div>
+      <a class="button" href="https://wiki.ubuntu.com/IllinoisTeam#A.2B2D3egA_Join_Us_for_an_Illinois_Tech_.26_Libre_Software_Meetup.21_.2B2D3cJ9g93RM-" target="_blank">Ubuntu LoCo Info</a>
+      <a class="button" href="https://libreplanet.org/wiki/Group:LibrePlanet_Illinois" target="_blank">LibrePlanet Illinois</a>
+    </div>
+    
+    <div class="meeting">
+      <h3>Next Meeting</h3>
+      <p>Join us on <strong>Thursday, March 13, 2025</strong> at <strong>8:00 PM CST</strong> on the Matrix chat server.</p>
+      <p><a href="https://matrix.to/#/#loco-us-il:ubuntu.com" target="_blank">Join the Meeting</a></p>
+    </div>
+  </div>
+  <footer>
+    <p>🄯 2025 Grass Roots Cyber. All rights reserved to the people.</p>
+  </footer>
+</body>
+</html>
