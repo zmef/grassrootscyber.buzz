@@ -1,2 +1,0 @@
-# grassrootscyber.buzz
-grassrootscyber.buzz
